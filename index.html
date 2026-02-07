@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💖</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.card {
+    background: #ffe6f0;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #ff1493;
+}
+
+.cats {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yesBtn {
+    background: hotpink;
+    color: white;
+    font-size: 22px;
+}
+
+#noBtn {
+    background: lightgray;
+}
+
+#message {
+    display: none;
+    font-size: 32px;
+    color: #ff1493;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Hey SHERON, will you be my Valentine? 💘</h1>
+    <div class="cats">🐱💖🐱💖🐱</div>
+
+    <button id="yesBtn" onclick="yesClicked()">YES 😍</button>
+    <button id="noBtn" onclick="noClicked()">NO 🙈</button>
+
+    <div id="message">YEEEEYYYYYYYY 💖🐱💘</div>
+</div>
+
+<script>
+let yesSize = 22;
+
+function noClicked() {
+    yesSize += 10;
+    const yesBtn = document.getElementById("yesBtn");
+    yesBtn.style.fontSize = yesSize + "px";
+    yesBtn.style.padding =
+        (yesSize / 1.5) + "px " + (yesSize * 1.8) + "px";
+}
+
+function yesClicked() {
+    document.getElementById("message").style.display = "block";
+    document.getElementById("yesBtn").style.display = "none";
+    document.getElementById("noBtn").style.display = "none";
+}
+</script>
+
+</body>
+</html>
